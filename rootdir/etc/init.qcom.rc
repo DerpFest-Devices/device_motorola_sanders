@@ -70,7 +70,12 @@ on late-fs
     start configstore-hal-1-0
     start gralloc-2-0
 
-    # Mount RW partitions which need run fsck
+    # Wait for hwservicemanager ready since fsck might be triggered in mount_all --late
+    # In such case, init won't responce the property_set from hwservicemanager and then
+    # cause services for bootanim not running.
+    wait_for_prop hwservicemanager.ready true
+
+    # mount RW partitions which need run fsck
     mount_all /vendor/etc/fstab.qcom --late
 
 on init
