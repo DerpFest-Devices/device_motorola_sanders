@@ -67,11 +67,6 @@ on late-fs
     start servicemanager
     start surfaceflinger
     start bootanim
-
-    # Wait for hwservicemanager ready since fsck might be triggered in mount_all --late
-    # In such case, init won't responce the property_set from hwservicemanager and then
-    # cause services for bootanim not running.
-    wait_for_prop hwservicemanager.ready true
     start configstore-hal-1-0
     start gralloc-2-0
 
