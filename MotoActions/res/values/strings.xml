@@ -17,8 +17,8 @@
 -->
 <resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
     <!-- Title and summary -->
-    <string name="moto_actions_title">Moto Settings</string>
-    <string name="moto_actions_summary">Yea we call it shit</string>
+    <string name="moto_actions_title">Derped MotosQuest</string>
+    <string name="moto_actions_summary">The quest which has all your Fest</string>
 
     <!-- Device gestures -->
     <string name="device_gestures_title">Device gestures</string>
