@@ -178,6 +178,10 @@ PRODUCT_PROPERTY_OVERRIDES += \
     ro.vendor.qti.sys.fw.bservice_limit=5 \
     ro.vendor.qti.sys.fw.bservice_age=5000
 
+# Netflix
+PRODUCT_PROPERTY_OVERRIDES += \
+    ro.netflix.bsp_rev=Q660-13149-1
+
 # FM
 PRODUCT_PROPERTY_OVERRIDES += \
     ro.fm.transmitter=false \
