@@ -168,7 +168,7 @@ PRODUCT_PROPERTY_OVERRIDES += \
     persist.hwc.enable_vds=1 \
     debug.sf.recomputecrop=0 \
     debug.enable.sglscale=1 \
-    vendor.display.enable_default_color_mode=1 \
+    vendor.display.enable_default_color_mode=0 \
     vendor.gralloc.enable_fb_ubwc=1 \
     vendor.display.disable_skip_validate=1
 
