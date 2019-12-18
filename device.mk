@@ -479,9 +479,10 @@ PRODUCT_COPY_FILES += \
 PRODUCT_PACKAGES += \
     CarrierConfig
 
-# Via
+# Prebuilt Packages
 PRODUCT_PACKAGES += \
-    Via
+    Via \
+    Wallpapers
     
 PRODUCT_BUILD_PROP_OVERRIDES += BUILD_UTC_DATE=0
 
