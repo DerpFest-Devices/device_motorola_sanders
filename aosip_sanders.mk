@@ -22,8 +22,11 @@ $(call inherit-product, $(SRC_TARGET_DIR)/product/product_launched_with_n_mr1.mk
 # Inherit from sanders device
 $(call inherit-product, device/motorola/sanders/device.mk)
 
-# Inherit some cmmon aosp stuff.
-$(call inherit-product, vendor/aosp/config/common.mk)
+# For Specific
+$(call inherit-product, vendor/motorola/sanders/sanders-vendor.mk)
+
+# Inherit some common AOSiP stuff.
+$(call inherit-product, vendor/aosip/config/common_full_phone.mk)
 
 # Boot animation
 TARGET_SCREEN_WIDTH := 1080
@@ -31,11 +34,10 @@ TARGET_SCREEN_HEIGHT := 1920
 
 ## Device identifier. This must come after all inclusions
 PRODUCT_DEVICE := sanders
-PRODUCT_NAME := aosp_sanders
+PRODUCT_NAME := aosip_sanders
 PRODUCT_BRAND := motorola
 PRODUCT_MANUFACTURER := motorola
 
-PRODUCT_SYSTEM_PROPERTY_BLACKLIST := ro.product.model
 PRODUCT_MODEL := Moto G (5S) Plus
 
 PRODUCT_BUILD_PROP_OVERRIDES += \
@@ -43,8 +45,9 @@ PRODUCT_BUILD_PROP_OVERRIDES += \
     PRIVATE_BUILD_DESC="sanders-user 8.1.0 OPS28.65-36 9fea release-keys"
 
 # FINGERPRINT
-BUILD_FINGERPRINT := google/crosshatch/crosshatch:9/PQ1A.190105.004/5148680:user/release-keys
-VENDOR_BUILD_FINGERPRINT := google/crosshatch/crosshatch:9/PQ1A.190105.004/5148680:user/release-keys
+BUILD_FINGERPRINT := google/walleye/walleye:8.1.0/OPM1.171019.011/4448085:user/release-keys
+VENDOR_BUILD_FINGERPRINT := google/walleye/walleye:8.1.0/OPM1.171019.011/4448085:user/release-keys
 
-# for specific
-$(call inherit-product, vendor/motorola/sanders/sanders-vendor.mk)
+# DerpFest Customs
+AOSIP_BUILDTYPE := DerpFest-CI
+BUILD_DATE := $(shell date +"%Y%m%d-%H%M%S")
