@@ -22,6 +22,7 @@ import android.content.ComponentName;
 import android.content.Context;
 import android.content.Intent;
 import android.content.SharedPreferences;
+import android.support.v7.preference.PreferenceManager;
 import android.preference.PreferenceManager;
 import android.content.ServiceConnection;
 import android.os.IBinder;
@@ -49,9 +50,9 @@ public class BootCompletedReceiver extends BroadcastReceiver {
 
         // Restore nodes to saved preference values
         for (String pref : Constants.sPrefKeys) {
+            SharedPreferences prefs = PreferenceManager.getDefaultSharedPreferences(context);
              Constants.writePreference(context, pref);
         }
-
         context.startService(new Intent(context, ServiceWrapper.class));
         new DiracUtils(context).onBootCompleted();
             DisplayCalibration.restore(context);
@@ -69,5 +70,10 @@ public class BootCompletedReceiver extends BroadcastReceiver {
         public void onServiceDisconnected(ComponentName className) {
             mServiceWrapper = null;
         }
+                // Send initial broadcasts
+                final boolean shouldEnablePocketMode =
+                        prefs.getBoolean(Constants.FP_WAKEUP_KEY, false) &&
+                        prefs.getBoolean(Constants.FP_POCKETMODE_KEY, false);
+                Utils.broadcastCustIntent(context, shouldEnablePocketMode);
     };
 }

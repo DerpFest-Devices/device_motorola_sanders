@@ -51,5 +51,5 @@ PRODUCT_SYSTEM_DEFAULT_PROPERTIES += \
     ro.build.fingerprint=$(BUILD_FINGERPRINT)
 
 # DerpFest Customs
-AOSIP_BUILDTYPE := Official
+AOSIP_BUILDTYPE := CI
 BUILD_DATE := $(shell date +"%Y%m%d-%H%M%S")

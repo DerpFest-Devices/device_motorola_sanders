@@ -28,7 +28,7 @@ public class ProximitySensor implements SensorEventListener {
     private static final boolean DEBUG = false;
     private static final String TAG = "PocketModeProximity";
 
-    private static final String FPC_FILE = "/sys/devices/soc/7af8000.spi/spi_master/spi8/spi8.0/proximity_state";
+    private static final String FP_PROX_NODE = "/sys/devices/soc/7af8000.spi/spi_master/spi8/spi8.0/proximity_state";
 
     private SensorManager mSensorManager;
     private Sensor mSensor;
@@ -52,10 +52,10 @@ public class ProximitySensor implements SensorEventListener {
     }
 
     private void setFPProximityState(boolean isNear) {
-        if (FileUtils.isFileWritable(FPC_FILE)) {
-            FileUtils.writeLine(FPC_FILE, isNear ? "1" : "0");
+        if (FileUtils.isFileWritable(FP_PROX_NODE)) {
+            FileUtils.writeLine(FP_PROX_NODE, isNear ? "1" : "0");
         } else {
-            Log.e(TAG, "Proximity state file " + FPC_FILE + " is not writable!");
+            Log.e(TAG, "Proximity state file " + FP_PROX_NODE + " is not writable!");
         }
     }
 

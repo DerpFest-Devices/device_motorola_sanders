@@ -76,6 +76,13 @@
                 android:targetPackage="com.moto.actions"
                 android:targetClass="com.moto.actions.dirac.DiracActivity" />
         </Preference>
-     
+
+        <SwitchPreference
+            android:key="fp_pocketmode"
+	    android:title="@string/pocket_title"
+	    android:summary="@string/pocket_summary"
+	    android:dependency="fp_wakeup"
+	    android:icon="@drawable/ic_pocket" />
+
    </PreferenceCategory>
 </PreferenceScreen>

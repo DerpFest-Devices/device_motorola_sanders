@@ -19,15 +19,20 @@ package org.lineageos.pocketmode;
 import android.content.BroadcastReceiver;
 import android.content.Context;
 import android.content.Intent;
+import android.os.UserHandle;
 import android.util.Log;
 
-public class BootCompletedReceiver extends BroadcastReceiver {
+public class Startup extends BroadcastReceiver {
 
     private static final String TAG = "MotoPocketMode";
 
     @Override
-    public void onReceive(final Context context, Intent intent) {
-        Log.d(TAG, "Starting");
-        context.startService(new Intent(context, PocketModeService.class));
+    public void onReceive(Context context, Intent intent) {
+        final String action = intent.getAction();
+        if (lineageos.content.Intent.ACTION_INITIALIZE_LINEAGE_HARDWARE.equals(action)) {
+            Log.d(TAG, "Starting");
+            context.startServiceAsUser(new Intent(context, PocketModeService.class),
+                    UserHandle.CURRENT);
+        }
     }
 }

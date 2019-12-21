@@ -13,17 +13,19 @@
 
     <application
         android:label="MotoPocketMode"
-        android:persistent="true">
+        android:persistent="true"
+	android:defaultToDeviceProtectedStorage="true"
+	android:directBootAware="true">
 
-        <receiver android:name="org.lineageos.pocketmode.BootCompletedReceiver">
+        <receiver android:name=".Startup">
             <intent-filter>
-                <action android:name="android.intent.action.BOOT_COMPLETED" />
-                <category android:name="android.intent.category.DEFAULT" />
+                <action android:name="99" />
+                <category android:name="lineageos.intent.action.INITIALIZE_LINEAGE_HARDWARE" />
             </intent-filter>
         </receiver>
 
-        <service android:name="org.lineageos.pocketmode.PocketModeService"
-                 android:permission="MotoPocketModeService">
+        <service android:name=".PocketModeService"
+                 android:permission="PocketModeService">
         </service>
 
         <activity android:name="PocketMode"
