@@ -138,15 +138,10 @@
     <string name="dirac_preset_dance">Dance</string>
     <string name="dirac_preset_metal">Metal</string>
 
-    <!-- PocketMode -->
-    <string name="pocket_title">Pocket Mode</string>
-    <string name="pocket_summary">Proximity check to not wake Device in pocket</string>
-    <string name="pocket_dialogTitle">Choose Pocket Mode On/Off</string>
-
     <!-- Headers -->
     <string name="displayheader">Display</string>
     <string name="gesturesheader">Gestures</string>
-    <string name="extrasheader">Extras</string>
+    <string name="extrasheader">Dirac</string>
 
     <!-- QS tile title -->
     <string name="dirac_qs_tile_title">Dirac Sound</string>

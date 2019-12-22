@@ -14,7 +14,6 @@
     <uses-permission android:name="android.permission.USE_FINGERPRINT" />
 
     <protected-broadcast android:name="com.android.systemui.doze.pulse" />
-    <protected-broadcast android:name="com.cyanogenmod.settings.device.CUST_UPDATE" />
 
     <application
         android:allowBackup="true"
@@ -35,9 +34,10 @@
             </intent-filter>
         </provider>
 
-        <receiver android:name=".Startup">
-           <intent-filter>
-                <action android:name="cyanogenmod.intent.action.INITIALIZE_CM_HARDWARE" />
+        <receiver android:name="com.moto.actions.BootCompletedReceiver">
+            <intent-filter>
+                <action android:name="android.intent.action.BOOT_COMPLETED" />
+                <category android:name="android.intent.category.DEFAULT" />
             </intent-filter>
         </receiver>
 
