@@ -1,2 +1,0 @@
-    <!-- How far the quick-quick settings panel extends below the status bar -->
-    <dimen name="qs_quick_header_panel_height">132dp</dimen>
