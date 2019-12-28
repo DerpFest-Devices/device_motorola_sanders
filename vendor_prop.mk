@@ -456,8 +456,3 @@ PRODUCT_PROPERTY_OVERRIDES += \
 # Disable touch heatmap
 PRODUCT_PROPERTY_OVERRIDES += \
     ro.input.video_enabled=false
-
-# Spectrum
-PRODUCT_PROPERTY_OVERRIDES += \
-    spectrum.support=1 \
-    persist.spectrum.kernel=Parallax
