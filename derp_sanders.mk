@@ -25,7 +25,7 @@ $(call inherit-product, device/motorola/sanders/device.mk)
 # For Specific
 $(call inherit-product, vendor/motorola/sanders/sanders-vendor.mk)
 
-# Inherit some common AOSiP stuff.
+# Inherit some common DerpFest stuff.
 $(call inherit-product, vendor/aosip/config/common_full_phone.mk)
 
 # Boot animation
@@ -33,7 +33,7 @@ TARGET_BOOT_ANIMATION_RES := 1080
 
 ## Device identifier. This must come after all inclusions
 PRODUCT_DEVICE := sanders
-PRODUCT_NAME := aosip_sanders
+PRODUCT_NAME := derp_sanders
 PRODUCT_BRAND := motorola
 PRODUCT_MANUFACTURER := motorola
 
@@ -51,5 +51,6 @@ PRODUCT_SYSTEM_DEFAULT_PROPERTIES += \
     ro.build.fingerprint=$(BUILD_FINGERPRINT)
 
 # DerpFest Customs
-AOSIP_BUILDTYPE := Official
+DERP_BUILDTYPE := Official
 BUILD_DATE := $(shell date +"%Y%m%d-%H%M%S")
+IS_PHONE := true
