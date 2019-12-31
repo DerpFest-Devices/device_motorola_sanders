@@ -281,3 +281,6 @@ VENDOR_SECURITY_PATCH := 2019-08-01
 
 BOARD_ROOT_EXTRA_SYMLINKS := \
 	/vendor/firmware_mnt/image:firmware/image
+
+#SurfaceFlinger
+TARGET_USE_AOSP_SURFACEFLINGER := true
