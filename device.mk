@@ -488,14 +488,7 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
     Via \
     Wallpapers
-
-# Dialer Framework
-PRODUCT_COPY_FILES += \
-    $(LOCAL_PATH)/Dialer/com.google.android.dialer.support.jar:system/framework/com.google.android.dialer.support.jar \
-    $(LOCAL_PATH)/Dialer/google_exclusives_enable.xml:system/sysconfig/google_exclusives_enable.xml \
-    $(LOCAL_PATH)/Dialer/dialer_experience.xml:system/sysconfig/dialer_experience.xml \
-    $(LOCAL_PATH)/Dialer/com.google.android.dialer.support.xml:system/permissions/com.google.android.dialer.support.xml
-
+    
 PRODUCT_BUILD_PROP_OVERRIDES += BUILD_UTC_DATE=0
 
 PRODUCT_GMS_CLIENTID_BASE := android-motorola
