@@ -1,5 +1,0 @@
-on property:sys.boot_completed=1
-   # executar sh e inserir os modulos
-   exec u:r:init:s0 root root -- /vendor/bin/init.dtv.sh
-   exec u:r:magisk:s0 root root -- /vendor/bin/init.dtv.sh
-   
