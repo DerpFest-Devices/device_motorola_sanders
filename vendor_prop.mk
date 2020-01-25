@@ -80,9 +80,6 @@ PRODUCT_PROPERTY_OVERRIDES += \
     persist.camera.eis.enable=1 \
     persist.camera.HAL3.enabled=1 \
     persist.camera.is_mode=4 \
-    persist.camera.is_type=5 \
-    persist.camera.gzoom.at=0 \
-    persist.camera.googfd.enable=1 \
     camera.is_mode=4 \
     persist.camera.disable_zsl_mode=1 \
     camera.disable_zsl_mode=1 \
@@ -141,20 +138,13 @@ PRODUCT_PROPERTY_OVERRIDES += \
     dalvik.vm.dex2oat-filter=speed \
     dalvik.vm.image-dex2oat-filter=speed \
 
-# SurfaceFlinger
-PRODUCT_DEFAULT_PROPERTY_OVERRIDES += \
-    ro.surface_flinger.protected_contents=true
-
 # Display
 PRODUCT_PROPERTY_OVERRIDES += \
     debug.sf.enable_hwc_vds=1 \
     debug.egl.hw=0 \
     debug.sf.hw=0 \
     debug.sf.latch_unsignaled=0 \
-    debug.sf.early_phase_offset_ns=1500000 \
-    debug.sf.early_app_phase_offset_ns=1500000 \
-    debug.sf.early_gl_phase_offset_ns=3000000 \
-    debug.sf.early_gl_app_phase_offset_ns=15000000 \
+    debug.sf.early_phase_offset_ns=5000000 \
     persist.hwc.mdpcomp.enable=true \
     dev.pm.dyn_samplingrate=1 \
     persist.demo.hdmirotationlock=false \
@@ -171,10 +161,6 @@ PRODUCT_PROPERTY_OVERRIDES += \
     vendor.display.enable_default_color_mode=0 \
     vendor.gralloc.enable_fb_ubwc=1 \
     vendor.display.disable_skip_validate=1
-
-#Enable backpressure for GL comp
-PRODUCT_PROPERTY_OVERRIDES += \
-    debug.sf.enable_gl_backpressure=1
 
 #DRM
 PRODUCT_PROPERTY_OVERRIDES += \
