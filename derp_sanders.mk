@@ -54,6 +54,7 @@ PRODUCT_SYSTEM_DEFAULT_PROPERTIES += \
 DERP_BUILDTYPE := Official
 BUILD_DATE := $(shell date +"%Y%m%d-%H%M%S")
 IS_PHONE := true
+CURRENT_BUILD_TYPE := nogapps
 
 ifeq ($(CURRENT_BUILD_TYPE), gapps)
 TARGET_GAPPS_ARCH := arm64
