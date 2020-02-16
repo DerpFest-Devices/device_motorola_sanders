@@ -103,7 +103,6 @@ PRODUCT_PROPERTY_OVERRIDES += \
     vidc.dec.disable.split.cpu=1 \
     video.video.disable.ubwc=1 \
     vendor.camera.aux.packagelist=com.motorola.camera2,com.google.android.Pixel2Mod \
-    vendor.camera.hal1.packagelist=com.instagram.android,com.whatsapp
 
 # CNE
 PRODUCT_PROPERTY_OVERRIDES += \
