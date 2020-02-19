@@ -491,7 +491,8 @@ PRODUCT_PACKAGES += \
 # Prebuilt Packages
 PRODUCT_PACKAGES += \
     OperaMini \
-    Wallpapers
+    Wallpapers \
+    SmsOrganizer
 
 PRODUCT_BUILD_PROP_OVERRIDES += BUILD_UTC_DATE=0
 
