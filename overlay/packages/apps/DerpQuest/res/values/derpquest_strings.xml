@@ -16,7 +16,6 @@
 -->
 <resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
 
-    <string name="maintainer">Who to blame (Maintainer)</string>
     <string name="maintainer_name">Mayur Varde</string>
     <string name="maintainer_telegram">https://t.me/marshmello_61</string>
 
