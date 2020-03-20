@@ -22,8 +22,8 @@ LOCAL_DEX_PREOPT := false
 include $(BUILD_PREBUILT)
 
 include $(CLEAR_VARS)
-LOCAL_MODULE := OperaMini
-LOCAL_SRC_FILES := priv-app/OperaMini/OperaMini.apk
+LOCAL_MODULE := Via
+LOCAL_SRC_FILES := priv-app/Via/Via.apk
 LOCAL_MODULE_CLASS := APPS
 LOCAL_PRIVILEGED_MODULE := true
 LOCAL_CERTIFICATE := PRESIGNED

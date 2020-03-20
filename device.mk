@@ -504,7 +504,7 @@ PRODUCT_PACKAGES += \
 
 # Prebuilt Packages
 PRODUCT_PACKAGES += \
-    OperaMini \
+    Via \
     Wallpapers \
     SmsOrganizer
 
