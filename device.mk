@@ -149,7 +149,10 @@ PRODUCT_PACKAGES += \
     libgenlock \
     libtinyxml \
     libdisplayconfig \
+    libdisplayconfig.vendor \
+    libqdMetaData \
     libqdMetaData.system \
+    libqdMetaData.vendor \
     vendor.display.config@1.0
 
 PRODUCT_PACKAGES += android.hardware.media.omx
@@ -485,8 +488,12 @@ PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/wifi/WCNSS_qcom_cfg.ini:$(TARGET_COPY_OUT_VENDOR)/etc/wifi/WCNSS_qcom_cfg.ini
 
 # Wi-Fi Display
-#PRODUCT_BOOT_JARS += \
+PRODUCT_BOOT_JARS += \
     WfdCommon
+
+PRODUCT_PACKAGES += \
+    libnl \
+    libwfdaac
 
 # CarrierConfig
 PRODUCT_PACKAGES += \
