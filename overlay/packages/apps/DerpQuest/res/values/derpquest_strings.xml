@@ -16,7 +16,7 @@
 -->
 <resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
 
-    <string name="maintainer_name">Mayur Varde</string>
-    <string name="maintainer_telegram">https://t.me/marshmello_61</string>
+    <string name="maintainer_name" translatable="false">Mayur Varde</string>
+    <string name="maintainer_telegram" translatable="false">https://t.me/marshmello_61</string>
 
 </resources>
