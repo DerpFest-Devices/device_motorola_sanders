@@ -50,6 +50,8 @@ PRODUCT_PROPERTY_OVERRIDES += \
     vendor.audio.safx.pbe.enabled=true \
     vendor.audio.tunnel.encode=false \
     ro.config.media_vol_steps=30 \
+    vendor.audio.dolby.ds2.enabled=true \
+    vendor.audio.dolby.ds2.hardbypass=false \
     vendor.use.voice.path.for.pcm.voip=false \
     hpx_send_params=1
 
