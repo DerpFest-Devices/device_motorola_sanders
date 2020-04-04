@@ -518,6 +518,10 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
     CarrierConfig
 
+# GApps-Config
+PRODUCT_COPY_FILES += \
+    $(LOCAL_PATH)/configs/gapps-config.txt:$(TARGET_COPY_OUT_VENDOR)/etc/gapps-config-sanders.txt
+
 # Prebuilt Packages
 PRODUCT_PACKAGES += \
     Via \
