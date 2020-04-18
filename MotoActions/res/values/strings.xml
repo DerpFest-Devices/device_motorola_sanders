@@ -17,12 +17,12 @@
 -->
 <resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
     <!-- Title and summary -->
-    <string name="moto_actions_title">Derped MotosQuest</string>
-    <string name="moto_actions_summary">The quest which has all your Fest</string>
+    <string name="moto_actions_title">Derped MotoQuest</string>
+    <string name="moto_actions_summary">The Quest full of Fest..</string>
 
     <!-- Device gestures -->
     <string name="device_gestures_title">Device gestures</string>
-    <string name="device_gestures_summary">Manage device gestures</string>
+    <string name="device_gesturess_summary">Manage device gestures</string>
 
     <!-- Ambient display gestures -->
     <string name="ambient_display_manage_summary">Manage ambient display gestures</string>
