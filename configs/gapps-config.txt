@@ -1,1 +1,4 @@
 PackageInstallerGoogle  # Exclude Google Package Installer
+PixelLauncher           # Exclude Pixel Launcher
+GoogleNow               # Exclude GoogleNow Launcher
+PixelIcons              # Exclude Pixel Icons
