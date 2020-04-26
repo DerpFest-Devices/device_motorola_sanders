@@ -249,7 +249,6 @@ PRODUCT_PROPERTY_OVERRIDES += \
     media.aac_51_output_enabled=true \
     media.settings.xml=/vendor/etc/media_profiles.xml \
     mm.enable.qcom_parser=135715 \
-    ro.surface_flinger.protected_contents=true \
     mm.enable.sec.smoothstreaming=true \
     mm.enable.smoothstreaming=true \
     mmp.enable.3g2=true
@@ -475,7 +474,6 @@ PRODUCT_PROPERTY_OVERRIDES += \
     ro.config.dha_th_rate=2.3 \
     ro.config.sdha_apps_bg_max=64 \
     ro.config.sdha_apps_bg_min=8
-    drm.service.enabled=true \
     media.stagefright.thumbnail.prefer_hw_codecs=true
 
 # Disable touch heatmap
@@ -489,18 +487,22 @@ PRODUCT_PROPERTY_OVERRIDES += \
     ro.surface_flinger.set_display_power_timer_ms=10000 \
     ro.surface_flinger.set_touch_timer_ms=5000 \
     ro.surface_flinger.set_idle_timer_ms=9000 \
-    ro.surface_flinger.force_hwc_copy_for_virtual_displays=true
+    ro.surface_flinger.force_hwc_copy_for_virtual_displays=true \
+    ro.surface_flinger.max_virtual_display_dimension=4096 \
+    ro.surface_flinger.vsync_event_phase_offset_ns=4000000 \
+    ro.surface_flinger.vsync_sf_event_phase_offset_ns=8000000 \
+    ro.surface_flinger.max_frame_buffer_acquired_buffers=3
 
 # Tweaks for battery saving
-PRODUCT_PROPERTY_OVERRIDES += \
-   pm.sleep_mode=1 \
-   usb_wakeup=enable \
-   proximity_incall=enable \
-   power_supply.wakeup=enable \
-   ro.config.hw_power_saving=1 \
-   ro.config.hw_fast_dormancy=1 \
-   ro.config.hw_quickpoweron=true \
-   persist.sys.use_dithering=0
+#PRODUCT_PROPERTY_OVERRIDES += \
+#   pm.sleep_mode=1 \
+#   usb_wakeup=enable \
+#   proximity_incall=enable \
+#   power_supply.wakeup=enable \
+#   ro.config.hw_power_saving=1 \
+#   ro.config.hw_fast_dormancy=1 \
+#   ro.config.hw_quickpoweron=true \
+#   persist.sys.use_dithering=0
 
 # Boot
 PRODUCT_PROPERTY_OVERRIDES += \
