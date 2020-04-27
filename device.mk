@@ -156,6 +156,8 @@ PRODUCT_PACKAGES += \
     libqdMetaData.vendor \
     vendor.display.config@1.0
 
+PRODUCT_PACKAGES += android.hardware.media.omx
+
 # DRM
 PRODUCT_PACKAGES += \
     android.hardware.drm@1.0-service \
@@ -263,12 +265,9 @@ PRODUCT_PACKAGES += \
     android.hardware.light@2.0-impl \
     android.hardware.light@2.0-service.sanders
 
-# Media (OMX)
+# Media
 PRODUCT_PACKAGES += \
-    libc2dcolorconvert \
-    android.hardware.media.omx \
-    libextmedia_jni \
-    libmm-omxcore
+    libc2dcolorconvert
 
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/configs/media_codecs.xml:$(TARGET_COPY_OUT_VENDOR)/etc/media_codecs.xml \
@@ -321,7 +320,6 @@ PRODUCT_PACKAGES += \
     libOmxAmrEnc \
     libOmxCore \
     libOmxEvrcEnc \
-    libOmxG711Enc \
     libOmxQcelp13Enc \
     libOmxVdec \
     libOmxVenc \
