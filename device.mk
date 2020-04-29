@@ -525,7 +525,8 @@ PRODUCT_COPY_FILES += \
 PRODUCT_PACKAGES += \
     Via \
     Wallpapers \
-    SmsOrganizer
+    SmsOrganizer \
+    QPGallery
 
 PRODUCT_BUILD_PROP_OVERRIDES += BUILD_UTC_DATE=0
 
