@@ -276,7 +276,6 @@ PRODUCT_PROPERTY_OVERRIDES += \
     persist.cne.feature=1 \
     persist.radio.add_power_save=1
 
-
 # NITZ
 PRODUCT_PROPERTY_OVERRIDES += \
     persist.rild.nitz_plmn="" \
@@ -305,6 +304,12 @@ PRODUCT_PROPERTY_OVERRIDES += \
     com.qc.hardware=true \
     debug.qc.hardware=true \
     persist.timed.enable=true
+
+PRODUCT_DEFAULT_PROPERTY_OVERRIDES += \
+    ro.vendor.qti.va_aosp.support=1
+
+PRODUCT_ODM_PROPERTIES += \
+    ro.vendor.qti.va_odm.support=1
 
 # Radio
 PRODUCT_PROPERTY_OVERRIDES += \
@@ -453,7 +458,7 @@ PRODUCT_PROPERTY_OVERRIDES += \
 
 # Create Swap disk, if below sys-prop enabled & also if device has lower (< 1 GB) RAM
 PRODUCT_PROPERTY_OVERRIDES += \
-ro.config.swap=true
+    persist.radio.data_lte_sys_ind=1
 
 # Properties
 PRODUCT_PROPERTY_OVERRIDES += \
