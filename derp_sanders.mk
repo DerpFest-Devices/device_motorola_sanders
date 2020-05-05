@@ -42,10 +42,10 @@ PRODUCT_MODEL := Moto G (5S) Plus
 PRODUCT_BUILD_PROP_OVERRIDES += \
     PRODUCT_NAME="sanders" \
     TARGET_DEVICE="sanders" \
-    PRIVATE_BUILD_DESC="coral-user 10 QQ2A.200405.005 6254899 release-keys"
+    PRIVATE_BUILD_DESC="coral-user 10 QQ2A.200501.001.B2 6352890 release-keys"
 
 # FINGERPRINT
-BUILD_FINGERPRINT := google/coral/coral:10/QQ2A.200405.005/6254899:user/release-keys
+BUILD_FINGERPRINT := google/coral/coral:10/QQ2A.200501.001.B2/6352890:user/release-keys
 
 PRODUCT_SYSTEM_DEFAULT_PROPERTIES += \
     ro.build.fingerprint=$(BUILD_FINGERPRINT)
