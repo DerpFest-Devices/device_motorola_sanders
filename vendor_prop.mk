@@ -490,14 +490,12 @@ PRODUCT_PROPERTY_OVERRIDES += \
     ro.surface_flinger.max_frame_buffer_acquired_buffers=3
 
 # Tweaks for battery saving
-PRODUCT_PROPERTY_OVERRIDES += \
-    pm.sleep_mode=1 \
-    power.saving.mode=1 \
-    ro.ril.disable.power.collapse=0 \
-    ro.config.hw_power_saving=1
+#PRODUCT_PROPERTY_OVERRIDES += \
+#   pm.sleep_mode=1 \
 #   usb_wakeup=enable \
 #   proximity_incall=enable \
 #   power_supply.wakeup=enable \
+#   ro.config.hw_power_saving=1 \
 #   ro.config.hw_fast_dormancy=1 \
 #   ro.config.hw_quickpoweron=true \
 #   persist.sys.use_dithering=0
