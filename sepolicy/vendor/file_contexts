@@ -136,9 +136,6 @@
 #avb
 /avb(/.*)?               u:object_r:avb_file:s0
 
-# dsp
-/dsp(/.*)?               u:object_r:adsprpcd_file:s0
-
 # Files in firmware
 /firmware(/.*)?          u:object_r:firmware_file:s0
 
