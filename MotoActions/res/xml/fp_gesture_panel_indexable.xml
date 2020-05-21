@@ -2,6 +2,7 @@
 <!--
      Copyright (C) 2015-2016 The CyanogenMod Project
      Copyright (C) 2017 The LineageOS Project
+     Copyright (C) 2020 github.com/marshmello61
 
      Licensed under the Apache License, Version 2.0 (the "License"
      you may not use this file except in compliance with the License.
@@ -22,6 +23,6 @@
         android:key="fp_gestures"
         android:title="@string/fingerprint_gestures_title"
         android:summary="@string/fingerprint_gestures_manage_summary"
-        android:icon="@drawable/ic_settings_fingerprint" />
+        android:icon="@drawable/ic_derp_fpgesture_background" />
 
 </PreferenceScreen>

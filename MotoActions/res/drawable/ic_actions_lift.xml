@@ -21,7 +21,7 @@
     android:height="1610dp"
     android:viewportWidth="1610"
     android:viewportHeight="1610"
-    android:tint="@color/icon_tint">
+    android:tint="@color/derp_dgesture_background">
     <group android:name="group">
         <path
             android:name="path"
