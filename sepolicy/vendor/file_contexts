@@ -1,28 +1,22 @@
-#/dev/block/platform/soc/7824900.sdhci/mmcblk0p19         u:object_r:modem_efs_partition_device:s0
-#/dev/block/platform/soc/7824900.sdhci/mmcblk0p27         u:object_r:modem_efs_partition_device:s0
-#/dev/block/platform/soc/7824900.sdhci/mmcblk0p28         u:object_r:modem_efs_partition_device:s0
-
-# FSG
-/fsg                                                     u:object_r:fsg_file:s0
-
 # ADSP
-#/sys/kernel/aov(/.*)?                                    u:object_r:sysfs_adsp:s0
+/sys/kernel/aov(/.*)?                                    u:object_r:sysfs_adsp:s0
 /data/adspd(/.*)?                                        u:object_r:adspd_data_file:s0
 
 # AMPS
 /dev/hidraw[0-9]*                                        u:object_r:amps_raw_device:s0
 
 # Binaries
-/vendor/bin/charge_only_mode                             u:object_r:charge_only_exec:s0
 /vendor/bin/init\.mmi\.boot\.sh                          u:object_r:mmi_boot_exec:s0
 /vendor/bin/wlan_carrier_bin\.sh                         u:object_r:init_wifi_exec:s0
-#/vendor/bin/init\.qti\.fm\.sh		u:object_r:qti_init_shell_exec:s0
+/vendor/bin/init\.qti\.fm\.sh		                 u:object_r:qti_init_shell_exec:s0
+
+#Camera
+/(vendor|system/vendor)/bin/hw/motorola\.hardware\.camera\.provider@2\.4-service        u:object_r:hal_camera_default_exec:s0
+/(vendor|system/vendor)/lib/motorola\.hardware\.camera\.device@1\.0.so                  u:object_r:hal_camera_default_exec:s0
+/(vendor|system/vendor)/lib/motorola\.hardware\.camera\.provider@2\.4.so                u:object_r:hal_camera_default_exec:s0
 
 # CMActions
 /sys/homebutton(/.*)?                                    u:object_r:sysfs_homebutton:s0
-
-# Motorola services
-/data/chargeonlymode(/.*)?                               u:object_r:chargeonly_data_file:s0
 
 # Fingerprint
 /data/.fps(/.*)?                                         u:object_r:fingerprintd_data_file:s0
@@ -36,7 +30,7 @@
 /persist/mdm(/.*)?                                       u:object_r:persist_modem_file:s0
 
 /persist/prop(/.*)?                                      u:object_r:persist_omadm_file:s0
-#/persist/prov(/.*)?                                      u:object_r:persist_drm_file:s0
+/persist/prov(/.*)?                                      u:object_r:persist_drm_file:s0
 /persist/omadm(/.*)?                                     u:object_r:persist_omadm_file:s0
 /persist/omadm_database(/.*)?                            u:object_r:persist_omadm_file:s0
 /persist/omadm_cust_database(/.*)?                       u:object_r:persist_omadm_file:s0
@@ -63,9 +57,9 @@
 /sys/module/qpnp_bms(/.*)?                               u:object_r:sysfs_batt:s0
 /sys/module/cnss_pci(/.*)?                               u:object_r:sysfs_cnss:s0
 
-#/sys/devices/iio_sysfs_trigger(/.*)?                     u:object_r:sysfs_sensors:s0
-#/sys/devices/virtual/stm401/stm401_ms(/.*)?              u:object_r:sysfs_sensors:s0
-#/sys/devices/virtual/stm401/stm401_as(/.*)?              u:object_r:sysfs_sensors:s0
+/sys/devices/iio_sysfs_trigger(/.*)?                     u:object_r:sysfs_sensors:s0
+/sys/devices/virtual/stm401/stm401_ms(/.*)?              u:object_r:sysfs_sensors:s0
+/sys/devices/virtual/stm401/stm401_as(/.*)?              u:object_r:sysfs_sensors:s0
 
 /sys/devices/platform/msm_ssbi.0/pm8921-core/pm8921-charger(/.*)? u:object_r:sysfs_batt:s0
 
@@ -95,7 +89,7 @@
 /dev/block/bootdevice/by-name/hw                         u:object_r:hw_block_device:s0
 /dev/block/bootdevice/by-name/metadata                   u:object_r:metadata_block_device:s0
 /dev/block/mmcblk0p35                                    u:object_r:metadata_block_device:s0
-#/dev/block/bootdevice/by-name/persist                    u:object_r:persist_block_device:s0
+/dev/block/bootdevice/by-name/persist                    u:object_r:persist_block_device:s0
 /dev/block/bootdevice/by-name/utagsBackup                u:object_r:utags_block_device:s0
 /dev/block/bootdevice/by-name/utags                      u:object_r:utags_block_device:s0
 
@@ -103,7 +97,7 @@
 /data/misc/netmgr(/.*)?                                  u:object_r:netmgr_data_file:s0
 
 # Sensors
-#/dev/mmi_sys_temp                                        u:object_r:thermal_device:s0
+/dev/mmi_sys_temp                                        u:object_r:thermal_device:s0
 /dev/motosh                                              u:object_r:sensors_device:s0
 /dev/motosh_as                                           u:object_r:sensors_device:s0
 /dev/motosh_ms                                           u:object_r:sensors_device:s0
@@ -121,8 +115,8 @@
 /data/system/perfd(/.*)?                                        u:object_r:perfd_data_file:s0
 /data/oemnvitems(/.*)?                                          u:object_r:nv_data_file:s0
 
-/system/vendor/bin/perfd           u:object_r:perfd_exec:s0
-/system/vendor/bin/hw/android\.hardware\.power@1\.2-service          u:object_r:hal_power_default_exec:s0
+/(vendor|system/vendor)/bin/perfd           u:object_r:perfd_exec:s0
+/(vendor|system/vendor)/bin/hw/android\.hardware\.power@1\.2-service          u:object_r:hal_power_default_exec:s0
 /system/vendor/radio(/.*)? u:object_r:radio_data_file:s0
 
 /system/vendor/bin/qmi_motext_hook u:object_r:rild_exec:s0
@@ -131,6 +125,7 @@
 
 # Fingerprint custom hal
 /(vendor|system/vendor)/bin/hw/android\.hardware\.biometrics\.fingerprint@2\.1-service_32 u:object_r:hal_fingerprint_default_exec:s0
+/(vendor|system/vendor)/bin/hw/android\.hardware\.biometrics\.fingerprint@2\.1-fpcservice  u:object_r:hal_fingerprint_default_exec:s0
 
 # Sensors 32b hal
 /(vendor|system/vendor)/bin/hw/android\.hardware\.sensors@1\.0-service_32        u:object_r:hal_sensors_default_exec:s0
@@ -141,8 +136,11 @@
 #avb
 /avb(/.*)?               u:object_r:avb_file:s0
 
-# files in firmware
-/firmware(/.*)?         u:object_r:firmware_file:s0
-
 # dsp
 /dsp(/.*)?               u:object_r:adsprpcd_file:s0
+
+# Files in firmware
+/firmware(/.*)?          u:object_r:firmware_file:s0
+
+# Files in fsg
+/fsg(/.*)?               u:object_r:fsg_file:s0
