@@ -22,15 +22,6 @@ LOCAL_DEX_PREOPT := false
 include $(BUILD_PREBUILT)
 
 include $(CLEAR_VARS)
-LOCAL_MODULE := Via
-LOCAL_SRC_FILES := priv-app/Via/Via.apk
-LOCAL_MODULE_CLASS := APPS
-LOCAL_PRIVILEGED_MODULE := true
-LOCAL_CERTIFICATE := PRESIGNED
-LOCAL_DEX_PREOPT := false
-include $(BUILD_PREBUILT)
-
-include $(CLEAR_VARS)
 LOCAL_MODULE := SmsOrganizer
 LOCAL_SRC_FILES := priv-app/SmsOrganizer/SmsOrganizer.apk
 LOCAL_MODULE_CLASS := APPS
