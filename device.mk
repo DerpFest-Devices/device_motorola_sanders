@@ -516,6 +516,7 @@ PRODUCT_COPY_FILES += \
 
 # Prebuilt Packages
 PRODUCT_PACKAGES += \
+    Via \
     Wallpapers \
     SmsOrganizer \
     QPGallery
