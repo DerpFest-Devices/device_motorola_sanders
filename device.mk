@@ -343,6 +343,11 @@ PRODUCT_COPY_FILES += \
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/configs/default-permissions-google.xml:system/product/etc/default-permissions/default-permissions-google.xml
 
+# Perf Jars
+PRODUCT_BOOT_JARS += \
+   QPerformance \
+   UxPerformance
+
 # Power
 PRODUCT_PACKAGES += \
     android.hardware.power@1.2-service \
