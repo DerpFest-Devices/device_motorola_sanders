@@ -291,4 +291,4 @@ BOARD_ROOT_EXTRA_SYMLINKS := \
 	/vendor/firmware_mnt/image:firmware/image
 
 #SurfaceFlinger
-TARGET_USE_AOSP_SURFACEFLINGER := true
+#TARGET_USE_AOSP_SURFACEFLINGER := true
