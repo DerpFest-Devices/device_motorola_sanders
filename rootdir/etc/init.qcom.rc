@@ -938,7 +938,7 @@ on charger
 
 on property:sys.boot_completed=1
     write /dev/kmsg "Boot completed "
-    setprop sys.io.scheduler bfq
+    setprop sys.io.scheduler cfq
 
     # CPUset Settings
     write /dev/cpuset/background/cpus 0-3
@@ -947,20 +947,8 @@ on property:sys.boot_completed=1
     # Enable ZRAM on boot_complete
     swapon_all /system/vendor/etc/fstab.qcom
     # swapon /dev/block/zram0 -p 32758
-
-on property:ro.boot.ram=2GB
-    write /sys/block/zram0/disksize 536870912
     write /proc/sys/vm/swappiness 100
 
-on property:ro.boot.ram=3GB
-    write /sys/block/zram0/disksize 805306368
-    write /proc/sys/vm/swappiness 100
-
-on property:ro.boot.ram=4GB
-    write /sys/block/zram0/disksize 1073741824
-    write /proc/sys/vm/swappiness 50
-
-on property:sys.boot_completed=1
     # scheduler settings
     write /proc/sys/kernel/sched_window_stats_policy 2
     write /proc/sys/kernel/sched_ravg_hist_size 3
@@ -1034,6 +1022,31 @@ on property:sys.boot_completed=1
     write /sys/devices/system/cpu/cpufreq/interactive/boostpulse_duration 0
     write /sys/devices/system/cpu/cpu0/cpufreq/scaling_min_freq 652800
     write /sys/devices/system/cpu/cpu0/cpufreq/scaling_max_freq 1958000
+
+    # GPU settings
+    chown system system /sys/devices/soc/1c00000.qcom,kgsl-3d0/devfreq/1c00000.qcom,kgsl-3d0/governor
+    chown system system /sys/devices/soc/1c00000.qcom,kgsl-3d0/devfreq/1c00000.qcom,kgsl-3d0/min_freq
+    chown system system /sys/devices/soc/1c00000.qcom,kgsl-3d0/devfreq/1c00000.qcom,kgsl-3d0/max_freq
+    chown system system /sys/class/kgsl/kgsl-3d0/max_gpuclk
+    chmod 0644 /sys/devices/soc/1c00000.qcom,kgsl-3d0/devfreq/1c00000.qcom,kgsl-3d0/governor
+    chmod 0644 /sys/devices/soc/1c00000.qcom,kgsl-3d0/devfreq/1c00000.qcom,kgsl-3d0/min_freq
+    chmod 0644 /sys/devices/soc/1c00000.qcom,kgsl-3d0/devfreq/1c00000.qcom,kgsl-3d0/max_freq
+    chmod 0644 /sys/class/kgsl/kgsl-3d0/max_gpuclk
+    write /sys/devices/soc/1c00000.qcom,kgsl-3d0/devfreq/1c00000.qcom,kgsl-3d0/governor "msm-adreno-tz"
+    write /sys/devices/soc/1c00000.qcom,kgsl-3d0/devfreq/1c00000.qcom,kgsl-3d0/min_freq 133000000
+    write /sys/devices/soc/1c00000.qcom,kgsl-3d0/devfreq/1c00000.qcom,kgsl-3d0/max_freq 650000000
+    write /sys/class/kgsl/kgsl-3d0/max_gpuclk 650000000
+
+    # CAF CPU Boost
+    chown system system /sys/module/cpu_boost/parameters/input_boost_enabled
+    chown system system /sys/module/cpu_boost/parameters/input_boost_freq
+    chown system system /sys/module/cpu_boost/parameters/input_boost_ms
+    chmod 0644 /sys/module/cpu_boost/parameters/input_boost_enabled
+    chmod 0644 /sys/module/cpu_boost/parameters/input_boost_freq
+    chmod 0644 /sys/module/cpu_boost/parameters/input_boost_ms
+    write /sys/module/cpu_boost/parameters/input_boost_enabled 1
+    write /sys/module/cpu_boost/parameters/input_boost_freq "0:1036800 1:1036800 2:1036800 3:1036800 4:1036800 5:1036800 6:1036800 7:1036800"
+    write /sys/module/cpu_boost/parameters/input_boost_ms 400
 
     # re-enable thermal & BCL core_control now
     write /sys/module/msm_thermal/core_control/enabled 1
