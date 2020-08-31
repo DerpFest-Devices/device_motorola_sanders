@@ -22,6 +22,3 @@ LOCAL_PROGUARD_ENABLED := disabled
 include frameworks/base/packages/SettingsLib/common.mk
 
 include $(BUILD_PACKAGE)
-
-LOCAL_STATIC_ANDROID_LIBRARIES := \
-    SettingsLib

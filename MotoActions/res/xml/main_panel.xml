@@ -80,14 +80,6 @@
                 android:targetPackage="com.moto.actions"
                 android:targetClass="com.moto.actions.dirac.DiracActivity" />
         </Preference>
-
-        <Preference
-            android:key="clear_speaker_settings"
-            android:title="@string/clear_speaker_title" >
-            <intent
-                android:action="android.intent.action.MAIN"
-                android:targetClass="com.moto.actions.speaker.ClearSpeakerActivity"
-                android:targetPackage="com.moto.actions.speaker" />
-        </Preference>
+     
    </PreferenceCategory>
 </PreferenceScreen>

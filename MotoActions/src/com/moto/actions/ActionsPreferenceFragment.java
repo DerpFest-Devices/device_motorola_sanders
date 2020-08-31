@@ -17,22 +17,13 @@
 
 package com.moto.actions;
 
-import android.content.Intent;
 import android.os.Bundle;
 import androidx.preference.PreferenceFragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import androidx.preference.Preference;
-import androidx.preference.SwitchPreference;
-import androidx.preference.ListPreference;
-
-import com.moto.actions.speaker.ClearSpeakerActivity;
 
 public class ActionsPreferenceFragment extends PreferenceFragment {
-
-    private static final String PREF_CLEAR_SPEAKER = "clear_speaker_settings";
-    private Preference mClearSpeakerPref;
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
@@ -45,12 +36,5 @@ public class ActionsPreferenceFragment extends PreferenceFragment {
     @Override
     public void onCreatePreferences(Bundle savedInstanceState, String rootKey) {
         addPreferencesFromResource(R.xml.main_panel);
-
-        mClearSpeakerPref = (Preference) findPreference(PREF_CLEAR_SPEAKER);
-        mClearSpeakerPref.setOnPreferenceClickListener(preference -> {
-            Intent intent = new Intent(getActivity().getApplicationContext(), ClearSpeakerActivity.class);
-            startActivity(intent);
-            return true;
-        });
     }
 }
