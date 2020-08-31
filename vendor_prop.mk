@@ -509,3 +509,7 @@ PRODUCT_PROPERTY_OVERRIDES += \
 # Zygote Preforking
 PRODUCT_PROPERTY_OVERRIDES += \
     persist.device_config.runtime_native.usap_pool_enabled=true
+
+# Gesture Navigation by default
+PRODUCT_PROPERTY_OVERRIDES += \
+    ro.boot.vendor.overlay.theme=com.android.internal.systemui.navbar.gestural
