@@ -332,6 +332,9 @@ PRODUCT_COPY_FILES += \
 DEVICE_PACKAGE_OVERLAYS += \
     $(LOCAL_PATH)/overlay
 
+PRODUCT_PACKAGES += \
+   PixelOverlay
+
 # Perf configs
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/configs/perf/wlc_model.tflite:$(TARGET_COPY_OUT_SYSTEM)/etc/perf/wlc_model.tflite \
