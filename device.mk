@@ -156,7 +156,9 @@ PRODUCT_PACKAGES += \
     libgpu_tonemapper \
     vendor.display.config@1.0 \
     libhwbinder \
-    libhwbinder.vendor
+    libhwbinder.vendor \
+    libhidltransport \
+    libhidltransport.vendor
 
 # DRM
 PRODUCT_PACKAGES += \
