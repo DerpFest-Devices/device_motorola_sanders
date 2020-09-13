@@ -153,7 +153,9 @@ PRODUCT_PACKAGES += \
     libdisplayconfig.vendor \
     libqdMetaData \
     libqdMetaData.system \
-    libgpu_tonemapper
+    libgpu_tonemapper \
+    libhwbinder \
+    libhwbinder.vendor
 
 # DRM
 PRODUCT_PACKAGES += \
