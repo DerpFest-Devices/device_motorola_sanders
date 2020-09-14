@@ -18,8 +18,6 @@
 
 DEVICE_PATH := device/motorola/sanders
 
-TARGET_SPECIFIC_HEADER_PATH := $(DEVICE_PATH)/include
-
 BOARD_VENDOR := motorola-qcom
 
 BUILD_BROKEN_DUP_RULES := true
