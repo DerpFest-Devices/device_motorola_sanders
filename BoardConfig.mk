@@ -20,7 +20,9 @@ DEVICE_PATH := device/motorola/sanders
 
 BOARD_VENDOR := motorola-qcom
 
+# Build
 BUILD_BROKEN_DUP_RULES := true
+BUILD_BROKEN_USES_BUILD_COPY_HEADERS := true
 
 # AIDs and CAPS
 TARGET_FS_CONFIG_GEN := $(DEVICE_PATH)/config.fs
