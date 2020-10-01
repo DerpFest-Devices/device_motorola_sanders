@@ -521,6 +521,10 @@ PRODUCT_PACKAGES += \
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/configs/gapps-config.txt:$(TARGET_COPY_OUT_VENDOR)/etc/gapps-config-sanders.txt
 
+# Remove unwanted packages
+PRODUCT_PACKAGES += \
+    RemovePackages
+
 # Prebuilt Packages
 #PRODUCT_PACKAGES += \
 #    Via \
