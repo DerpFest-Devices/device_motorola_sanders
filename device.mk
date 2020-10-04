@@ -153,6 +153,7 @@ PRODUCT_PACKAGES += \
     libdisplayconfig.vendor \
     libqdMetaData \
     libqdMetaData.system \
+    libqdMetaData.vendor \
     libgpu_tonemapper \
     vendor.display.config@1.0 \
     libhwbinder \
