@@ -26,7 +26,7 @@ $(call inherit-product, device/motorola/sanders/device.mk)
 $(call inherit-product, vendor/motorola/sanders/sanders-vendor.mk)
 
 # Inherit some common DerpFest stuff.
-$(call inherit-product, vendor/aosip/config/common_full_phone.mk)
+$(call inherit-product, vendor/derp/config/common_full_phone.mk)
 
 # Boot animation
 TARGET_BOOT_ANIMATION_RES := 1080
