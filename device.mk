@@ -228,14 +228,15 @@ PRODUCT_COPY_FILES += \
 # IMS & Telephony
 PRODUCT_PACKAGES += \
     ims-ext-common \
-    telephony-ext \
     ims-ext-common_system \
     ims_ext_common.xml \
     qti-telephony-hidl-wrapper \
-    qti_telephony_hidl_wrapper.xml
+    qti_telephony_hidl_wrapper.xml \
+    qti-telephony-utils \
+    qti_telephony_utils.xml
 
-PRODUCT_BOOT_JARS += \
-    telephony-ext
+#PRODUCT_BOOT_JARS += \
+#    telephony-ext
 
 # IMS
 PRODUCT_PACKAGES += \
@@ -345,9 +346,9 @@ PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/configs/default-permissions-google.xml:system/product/etc/default-permissions/default-permissions-google.xml
 
 # Perf Jars
-PRODUCT_BOOT_JARS += \
-   QPerformance \
-   UxPerformance
+#PRODUCT_BOOT_JARS += \
+#   QPerformance \
+#   UxPerformance
 
 # Power
 PRODUCT_PACKAGES += \
@@ -401,11 +402,15 @@ PRODUCT_PACKAGES += \
     librmnetctl \
     libprotobuf-cpp-full \
     libprotobuf-cpp-lite \
-    libxml2
+    libxml2 \
+    android.hardware.radio@1.0 \
+    android.hardware.radio@1.1 \
+    android.hardware.radio@1.2 \
+    android.hardware.radio@1.4 \
+    android.hardware.radio.config@1.0 \
+    android.hardware.secure_element@1.0 \
+    libcnefeatureconfig \
 
-#RIL
-PRODUCT_PACKAGES += \
-    android.hardware.radio@1.0
 
 # Seccomp policy
 PRODUCT_COPY_FILES += \
