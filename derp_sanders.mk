@@ -51,11 +51,7 @@ PRODUCT_SYSTEM_DEFAULT_PROPERTIES += \
     ro.build.fingerprint=$(BUILD_FINGERPRINT)
 
 # DerpFest Customs
-DERP_BUILDTYPE := CI
+DERP_BUILDTYPE := Official
 BUILD_DATE := $(shell date +"%Y%m%d-%H%M%S")
 IS_PHONE := true
-DERP_BUILD_ZIP_TYPE := VANILLA
-
-ifeq ($(DERP_BUILD_ZIP_TYPE), GAPPS)
 TARGET_GAPPS_ARCH := arm64
-endif
