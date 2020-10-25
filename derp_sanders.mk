@@ -53,5 +53,6 @@ PRODUCT_SYSTEM_DEFAULT_PROPERTIES += \
 # DerpFest Customs
 DERP_BUILDTYPE := Official
 BUILD_DATE := $(shell date +"%Y%m%d-%H%M%S")
+WITH_GAPPS := true
 IS_PHONE := true
 TARGET_GAPPS_ARCH := arm64
