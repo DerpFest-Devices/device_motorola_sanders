@@ -109,7 +109,7 @@ PRODUCT_PACKAGES += \
 # Camera
 PRODUCT_PACKAGES += \
     libbson \
-    Camera2 \
+    GCamGo \
     libgui_vendor \
     camera_msm8953_shim \
     camera.device@1.0-impl \
